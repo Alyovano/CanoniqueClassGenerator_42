@@ -25,14 +25,14 @@ touch $fileHPP
 touch $fileCPP
 
 #Writing in HPP
-cat ClassHPP > $fileHPP
+cat ./srcs/ClassHPP > $fileHPP
 sed -i -e "s/user_HPP_name/$hppHeader/g" $fileHPP
 sed -i -e "s/__user_class_name/$filename/g" $fileHPP
 
 echo "${green}$filename.hpp : Done.${reset}"
 
 #Writing in CPP
-cat ClassCPP > $fileCPP
+cat ./srcs/ClassCPP > $fileCPP
 sed -i -e "s/__user_class_name/$filename/g" $fileCPP
 
 echo "${green}$filename.cpp : Done.${reset}"
