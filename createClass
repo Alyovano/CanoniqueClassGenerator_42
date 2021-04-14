@@ -1,0 +1,38 @@
+#!/bin/bash
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
+CPP=".cpp"
+HPP=".hpp"
+_HPP="_HPP"
+
+read -p 'Enter prefixe of your .hpp/.cpp : ' filename
+
+if [ -z "$filename" ]; 
+then
+	echo "${red}Empty filename${reset}"
+	exit 1
+fi
+echo "${green}Creating $filename Coplienne class${reset}"
+
+hppHeader="${filename^^}$_HPP"
+fileHPP="$filename$HPP"
+fileCPP="$filename$CPP"
+
+#Creating files
+touch $fileHPP
+touch $fileCPP
+
+#Writing in HPP
+cat ClassHPP > $fileHPP
+sed -i -e "s/user_HPP_name/$hppHeader/g" $fileHPP
+sed -i -e "s/__user_class_name/$filename/g" $fileHPP
+
+echo "${green}$filename.hpp : Done.${reset}"
+
+#Writing in CPP
+cat ClassCPP > $fileCPP
+sed -i -e "s/__user_class_name/$filename/g" $fileCPP
+
+echo "${green}$filename.cpp : Done.${reset}"

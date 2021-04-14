@@ -1,0 +1,21 @@
+#ifndef user_HPP_name
+#define user_HPP_name
+
+#include <string>
+#include <iostream>
+#include <unistd.h>
+
+class __user_class_name
+{
+
+private:
+
+public:
+
+	__user_class_name(const __user_class_name & x);
+	__user_class_name&	operator=(const __user_class_name & x);
+	__user_class_name();
+	~__user_class_name();
+};
+
+#endif

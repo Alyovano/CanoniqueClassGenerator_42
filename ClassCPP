@@ -1,0 +1,21 @@
+#include "__user_class_name.hpp"
+
+__user_class_name::__user_class_name() {
+}
+
+__user_class_name::~__user_class_name() {
+}
+
+__user_class_name::__user_class_name(const __user_class_name & x) {
+	*this = x;
+}
+
+__user_class_name&		__user_class_name::operator=(const __user_class_name & x) {
+	// if (this != &x) {
+	// 	this->a = x.a;
+	// 	this->b = x.b;
+	// 	     ...
+	// }
+	(void)x; // -Werror -Wextra -Wall
+    return *this;
+}
