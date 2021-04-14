@@ -1,7 +1,7 @@
 # CanoniqueClassGenerator_42
 Stop writing and rewriting your classes again and again
 
--The script asks you for the name of your class, ex : "MyClass" </br>
+-The script asks you for the name of your class, ex : "MyClass" = "MyClass.hpp, Myclass.cpp" </br>
 And will then create the two corresponding .cpp .hpp files with the functions of the 'Coplienne / Canonical' cpp classes. </br>
 
 ## Install : </br>
