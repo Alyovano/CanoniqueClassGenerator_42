@@ -6,7 +6,7 @@ Stop writing and rewriting your classes again and again
 
 Just copy and paste </br>
 
-And use the alias "createcpp" </br> 
+And use the alias "createclass" </br> 
 <code>$ createclass </code> </br>
 
 ### Enjoy ! 
